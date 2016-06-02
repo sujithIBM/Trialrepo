@@ -1,2 +1,2 @@
 # Trialrepo
-This is a repository created to trial and create a repository.
+Test Github is a repository for showing bare minimums to a master, and sujith.

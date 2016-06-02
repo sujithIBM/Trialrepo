@@ -1,0 +1,128 @@
+add_device -l VIOS1 --rackid 2 --rack-location vinb -u padmin -p padmin 192.168.93.89
+
+
+add_device -l VIOS1 --rack --rack-location vibha -u padmin -p padmin 192.168.93.89
+
+add_device -l svc1 --rack vibha -u superuser -p passw0rd 192.168.93.89
+
+
+add_device -l VIOS2 --rack vibha -u padmin -p padmin 192.168.93.91
+
+
+add_device -l VIOS2 --rack test1 -u padmin -p padmin 192.168.93.91
+
+
+add_device -l VIOS2 -u padmin -p padmin 192.168.93.91
+
+add_device -l POWERVC -u root -p PASSW0RD 9.3.46.245
+
+
+
+add_device -l purekvm4-imm -u USERID -p PASSW0RD 9.3.46.206
+
+echo Adding purekvm to PPIM...
+add_device -l purekvm4 --rackid 4 --rack-location U6 -u root -p PASSW0RD 9.3.46.207
+
+echo Adding Nagios_Core to PPIM...
+add_device -l puremgr4 --rackid 4 --rack-location U6 -u root -p PASSW0RD 9.3.46.208
+
+echo Adding serviceVM to PPIM...
+add_device -l service4 --rackid 4 --rack-location U6 -u root -p PASSW0RD 9.3.46.209
+
+echo Adding powervc to PPIM...
+add_device -l powervc4 --rackid 4 --rack-location U6 -u root -p PASSW0RD 9.3.46.210
+
+echo Adding HMC-IMM to PPIM...
+add_device -l hmc4-imm --rackid 4 --rack-location U7 -u USERID -p PASSW0RD 9.3.46.189
+
+echo Adding HMC to PPIM...
+add_device -l hmc4 --rackid 4 --rack-location U7 -u hscroot -p abc1234 9.3.46.190
+
+echo Adding V7000 to PPIM...
+add_device -l V7K4 --rackid 4 --rack-location U12 -u superuser -p passw0rd 192.168.93.8
+
+#echo Adding V3700 to PPIM...
+#add_device -l V3700 -u superuser -p l0destone -t V3700 9.123.199.176
+
+echo Adding Mellanox Switch to PPIM...
+add_device -l Mellanox1 --rackid 4 --rack-location U20 -u admin -p admin 192.168.93.37
+
+echo Adding Rack Switches to PPIM...
+add_device -l IBM_Switch1 --rackid 4 --rack-location U19 -u admin -p admin 192.168.93.81
+
+echo Adding Brocade Switches to PPIM...
+add_device -l Brocade1 --rackid 4 --rack-location U16 -u admin -p password 192.168.93.11
+
+echo Adding PDU to PPIM...
+add_device -l PDU1 -t PDU --rackid 4 -u USERID -p passw0rd 192.168.93.25
+
+echo Adding VIOS to PPIM...
+add_device -l VIOS1 --rackid 4 --rack-location U2 -u padmin -p padmin 192.168.93.89
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[{'rackid': '2', 'rack-eia-location': 'U6', 'label': 'purekvm4-imm', 'device-type': 'IMM', 'deviceid': '1', 'machine-type-model': '7914AC1', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': 'E2NF333', 'ipv4-service-address': '9.3.46.206', 'version': '4.56', 'userid': 'USERID'}, {'rackid': '2', 'rack-eia-location': 'U7', 'label': 'hmc4-imm', 'device-type': 'IMM', 'deviceid': '5', 'machine-type-model': '837401M', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': 'E2NF337', 'ipv4-service-address': '9.3.46.189', 'version': '4.56', 'userid': 'USERID'}, {'rackid': '2', 'rack-eia-location': 'U7', 'label': 'hmc4', 'device-type': 'HMC', 'deviceid': '6', 'machine-type-model': 'V9d7-f78', 'receiver': '192.168.94.46', 'fixes': '', 'serial-number': '494e0ab', 'ipv4-service-address': '192.168.93.61', 'version': 'V8 R840', 'userid': 'hscroot'}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R1N1-8247-22L-SN2128F9A-JEM', 'device-type': 'PowerNode', 'deviceid': '7', 'machine-type-model': '8247-22L', 'fixes': '', 'serial-number': '2128F9A', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R1N6-8247-22L-SN2128F8A-Frank', 'device-type': 'PowerNode', 'deviceid': '8', 'machine-type-model': '8247-22L', 'fixes': '', 'serial-number': '2128F8A', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R3N6-8284-22A-SN21C46BV-Frank', 'device-type': 'PowerNode', 'deviceid': '9', 'machine-type-model': '8284-22A', 'fixes': '', 'serial-number': '21C46BV', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R3N4-8284-22A-SN21C46CV', 'device-type': 'PowerNode', 'deviceid': '10', 'machine-type-model': '8284-22A', 'fixes': '', 'serial-number': '21C46CV', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R3N3-8284-22A-SN21C46DV', 'device-type': 'PowerNode', 'deviceid': '11', 'machine-type-model': '8284-22A', 'fixes': '', 'serial-number': '21C46DV', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R1N3-8247-22L-SN2128FCA', 'device-type': 'PowerNode', 'deviceid': '12', 'machine-type-model': '8247-22L', 'fixes': '', 'serial-number': '2128FCA', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R3N5-8284-22A-SN21C468V-Frank', 'device-type': 'PowerNode', 'deviceid': '13', 'machine-type-model': '8284-22A', 'fixes': '', 'serial-number': '21C468V', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R3N2-8284-22A-SN21C46AV-Steph', 'device-type': 'PowerNode', 'deviceid': '14', 'machine-type-model': '8284-22A', 'fixes': '', 'serial-number': '21C46AV', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R1N4-8247-22L-SN2128FBA-Dino', 'device-type': 'PowerNode', 'deviceid': '15', 'machine-type-model': '8247-22L', 'fixes': '', 'serial-number': '2128FBA', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R1N5-8247-22L-SN2128FDA-Frank', 'device-type': 'PowerNode', 'deviceid': '16', 'machine-type-model': '8247-22L', 'fixes': '', 'serial-number': '2128FDA', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R3N1-8284-22A-SN21C469V', 'device-type': 'PowerNode', 'deviceid': '17', 'machine-type-model': '8284-22A', 'fixes': '', 'serial-number': '21C469V', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '2', 'rack-eia-location': '', 'label': 'R1N2-8247-22L-SN2128FAA', 'device-type': 'PowerNode', 'deviceid': '18', 'machine-type-model': '8247-22L', 'fixes': '', 'serial-number': '2128FAA', 'ipv4-service-address': '', 'version': 'SV840_050', 'userid': ''}, {'rackid': '3', 'rack-eia-location': 'U20', 'label': 'Mellanox2', 'device-type': 'Mellanox_Switch', 'deviceid': '21', 'machine-type-model': 'MSX1710', 'receiver': '192.168.94.46', 'fixes': '', 'serial-number': 'MT1518X00305', 'ipv4-service-address': '192.168.93.35', 'version': '3.4.3002', 'userid': 'admin'}, {'rackid': '2', 'rack-eia-location': 'U19', 'label': 'IBM_Switch1', 'device-type': 'IBM_Switch', 'deviceid': '22', 'machine-type-model': '7120-48E', 'receiver': '192.168.94.46', 'fixes': '', 'serial-number': '1000716', 'ipv4-service-address': '192.168.93.81', 'version': '7.11.3', 'userid': 'admin'}, {'rackid': '2', 'rack-eia-location': 'U16', 'label': 'Brocade1', 'device-type': 'Brocade', 'deviceid': '23', 'machine-type-model': 'Brocade 6510 Switch', 'receiver': '192.168.94.46', 'fixes': '', 'serial-number': '10152TB', 'ipv4-service-address': '192.168.93.11', 'version': 'v7.3.1b', 'userid': 'admin'}, {'rackid': '3', 'rack-eia-location': 'U6', 'label': 'purekvm1', 'device-type': 'Puremgr_Hypervisor', 'deviceid': '24', 'machine-type-model': 'IBM System x3550 M4', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': '06FDFHG', 'ipv4-service-address': '9.3.46.192', 'version': '1.1.0', 'userid': 'root'}, {'rackid': '4', 'rack-eia-location': 'U6', 'label': 'purekvm3', 'device-type': 'Puremgr_Hypervisor', 'deviceid': '25', 'machine-type-model': 'IBM System x3550 M4', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': '06FDFHN', 'ipv4-service-address': '9.3.46.196', 'version': '1.2.0', 'userid': 'root'}, {'rackid': '1', 'rack-eia-location': '', 'label': 'V3700', 'device-type': 'V3700', 'deviceid': '26', 'machine-type-model': '2072-24C', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': '0G07447', 'ipv4-service-address': '9.123.199.173', 'management-interface': [{'qualifier-type': '2', 'qualifier': '01-1', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '9.123.199.159'}, {'qualifier-type': '2', 'qualifier': '01-2', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '9.123.199.170'}], 'version': '7.5.0.3', 'userid': 'superuser'}, {'rackid': '1', 'rack-eia-location': '', 'label': 'V3700_expansion_2072-12E_0G077DL', 'device-type': 'StorwizeExpansion', 'deviceid': '27', 'machine-type-model': '2072-12E', 'fixes': '', 'serial-number': '0G077DL', 'ipv4-service-address': '', 'version': '', 'userid': ''}, {'rackid': '2', 'rack-eia-location': 'U12', 'label': 'V7K4', 'device-type': 'V7000', 'deviceid': '19', 'machine-type-model': '2076-524', 'receiver': '192.168.94.46', 'fixes': '', 'serial-number': '7820V9G', 'ipv4-service-address': '192.168.93.8', 'management-interface': [{'qualifier-type': '2', 'qualifier': '01-2', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '192.168.93.5'}, {'qualifier-type': '2', 'qualifier': '01-1', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '192.168.93.2'}, {'qualifier-type': '3', 'qualifier': 'node1 Port 3', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '192.168.93.4'}, {'qualifier-type': '3', 'qualifier': 'node2 Port 3', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '192.168.93.7'}], 'version': '7.5.0.4', 'userid': 'superuser'}, {'rackid': '2', 'rack-eia-location': 'U20', 'label': 'Mellanox1', 'device-type': 'Mellanox_Switch', 'deviceid': '20', 'machine-type-model': 'MSX1710', 'receiver': '192.168.94.46', 'fixes': '', 'serial-number': 'MT1518X00309', 'ipv4-service-address': '192.168.93.37', 'version': '', 'userid': 'admin'}, {'rackid': '2', 'rack-eia-location': 'U6', 'label': 'powervc4', 'device-type': 'PowerVC', 'deviceid': '4', 'machine-type-model': 'KVM', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': '', 'ipv4-service-address': '9.3.46.210', 'version': '', 'userid': 'root'}, {'rackid': '2', 'rack-eia-location': 'U6', 'label': 'purekvm4', 'device-type': 'Puremgr_Hypervisor', 'deviceid': '2', 'machine-type-model': 'IBM System x3550 M4', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': 'E2NF333', 'ipv4-service-address': '9.3.46.207', 'version': '', 'userid': 'root'}, {'rackid': '2', 'rack-eia-location': 'U6', 'label': 'puremgr4', 'device-type': 'Nagios_Core', 'deviceid': '3', 'machine-type-model': 'KVM', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': '', 'ipv4-service-address': '9.3.46.208', 'version': '', 'userid': 'root'}, {'rackid': '1', 'rack-eia-location': '', 'label': 'V5000', 'device-type': 'V5000', 'deviceid': '30', 'machine-type-model': '2077-24C', 'receiver': '9.3.46.198', 'fixes': '', 'serial-number': '7822232', 'ipv4-service-address': '9.114.170.152', 'management-interface': [{'qualifier-type': '2', 'qualifier': '01-1', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '9.114.170.153'}, {'qualifier-type': '2', 'qualifier': '01-2', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '9.114.170.154'}, {'qualifier-type': '3', 'qualifier': 'node1 Port 1', 'type': '1', 'sharing-allowed': 'False', 'ipv4-address': '9.114.170.149'}], 'version': '7.2.0.5', 'userid': 'superuser'}, {'rackid': '1', 'rack-eia-location': '', 'label': 'VIOS2', 'device-type': 'VIOS', 'deviceid': '29', 'machine-type-model': '', 'receiver': '192.168.94.46', 'fixes': '', 'serial-number': '', 'ipv4-service-address': '192.168.93.95', 'version': '', 'userid': 'padmin'}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
