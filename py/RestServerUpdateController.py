@@ -13,6 +13,7 @@ import update_mgr
 import rest_server_util
 import manage_nagios_core
 
+
 class RestServerUpdateController(object):
     def parse_assess_compliance_result_to_dic(self, parse_str, flrt_last_updated_date):
         _METHOD_ = 'parse_assess_compliance_result_to_dic'
